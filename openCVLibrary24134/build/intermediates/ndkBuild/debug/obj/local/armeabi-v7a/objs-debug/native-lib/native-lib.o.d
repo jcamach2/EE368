@@ -25,7 +25,8 @@
   /Users/AlvinKim/Desktop/OpenCV-android-sdk/sdk/native/jni/include/opencv2/video/video.hpp \
   /Users/AlvinKim/Desktop/OpenCV-android-sdk/sdk/native/jni/include/opencv2/video/tracking.hpp \
   /Users/AlvinKim/Desktop/OpenCV-android-sdk/sdk/native/jni/include/opencv2/video/background_segm.hpp \
-  /Users/AlvinKim/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/list
+  /Users/AlvinKim/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/list \
+  /Users/AlvinKim/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/iostream
 
 /Users/AlvinKim/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/string:
 
@@ -78,3 +79,5 @@
 /Users/AlvinKim/Desktop/OpenCV-android-sdk/sdk/native/jni/include/opencv2/video/background_segm.hpp:
 
 /Users/AlvinKim/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/list:
+
+/Users/AlvinKim/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/iostream:

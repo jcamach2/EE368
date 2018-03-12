@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
 
     private boolean                 firstFrame = true;
 
+    private int                     num_frames; // count of how many frames we've gone through
+
 
     private BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(this) {
         @Override
@@ -69,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
         mCameraViewMode = VIEW_CAMERA_RGBA;
 
         showToasts(DIALOG_SHOW_FIRST);
+        num_frames = 0;
     }
 
     @Override
@@ -127,7 +130,11 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
             case VIEW_CAMERA_RGBA:
                 break;
             case VIEW_CAMERA_ORB: {
-                    AlignFrame(mRgba.getNativeObjAddr(), mGray.getNativeObjAddr(), firstFrame);
+                    AlignFrame(mRgba.getNativeObjAddr(), mGray.getNativeObjAddr(), firstFrame, num_frames);
+                    num_frames = num_frames + 1;
+                    if (num_frames == 101) {
+                        num_frames = 1; // reset so that num_frames count does not get too big
+                    }
                     firstFrame = false;
                 } break;
             default:
@@ -157,5 +164,5 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
      */
     public native String stringFromJNI();
 
-    public native void AlignFrame(long mRgba, long mGray, boolean isFirst);
+    public native void AlignFrame(long mRgba, long mGray, boolean isFirst, int num_frames);
 }
