@@ -3,12 +3,16 @@
 #include <opencv2/features2d/features2d.hpp>
 #include <opencv2/calib3d/calib3d.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/video/video.hpp>
 
 
 using namespace std;
 using namespace cv;
 
-OrbFeatureDetector  orb_features (250 /* # of features */, 1.2f /* scale factor */, 8 /* # levels */);
+//OrbFeatureDetector  orb_features (250 /* # of features */, 1.2f /* scale factor */, 8 /* # levels */);
+
+OrbFeatureDetector  orb_features (100 /* # of features */, 1.2f /* scale factor */, 8 /* # levels */);
+
 
 vector<KeyPoint> prevKeypoints;
 Mat prevFrameDescriptors;
@@ -63,18 +67,20 @@ JNICALL Java_com_example_juani_videostabilizationandroid_MainActivity_AlignFrame
         vector<Point2f> f2Matches;
         // filter to get good matches
         for (int i = 0; i < matches.size(); i++) {
-            if (matches[i].distance < 100) {
+            if (matches[i].distance < 75) {
                 f1Matches.push_back(mKeypoints[matches[i].queryIdx].pt);        //current
                 f2Matches.push_back(prevKeypoints[matches[i].trainIdx].pt);     //previous
             }
         }
 
         /* Find homography estimate */
-        Mat H = findHomography(/* src */ f1Matches, /* dst */ f2Matches, RANSAC);
+
 
         Mat stabilizedM;
-        warpPerspective(mGray2, /*mRgba2*/ stabilizedM, H, mRgba2.size());
-
+//        Mat H = findHomography(/* src */ f1Matches, /* dst */ f2Matches, RANSAC);
+//        warpPerspective(mGray2, /*mRgba2*/ stabilizedM, H, mRgba2.size());
+        Mat affine = estimateRigidTransform(f1Matches, f2Matches, false);
+        warpAffine(mGray2, stabilizedM, affine, mRgba2.size());
       //  mRgba2 = stabilizedM;
         mGray2 = stabilizedM;
         orb_features.detect(mGray2, mKeypoints);
