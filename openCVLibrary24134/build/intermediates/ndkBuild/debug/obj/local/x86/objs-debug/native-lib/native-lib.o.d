@@ -21,7 +21,11 @@ C:/Users/juani/Documents/Stanford_2017_2018/EE368/openCVLibrary24134/build/inter
   C:/Users/juani/Documents/Stanford_2017_2018/OpenCV-android-sdk/sdk/native/jni/include\opencv2/core/affine.hpp \
   C:/Users/juani/Documents/Stanford_2017_2018/OpenCV-android-sdk/sdk/native/jni/include\opencv2/imgproc/imgproc.hpp \
   C:/Users/juani/Documents/Stanford_2017_2018/OpenCV-android-sdk/sdk/native/jni/include\opencv2/imgproc/types_c.h \
-  C:/Users/juani/Documents/Stanford_2017_2018/OpenCV-android-sdk/sdk/native/jni/include\opencv2/core/core_c.h
+  C:/Users/juani/Documents/Stanford_2017_2018/OpenCV-android-sdk/sdk/native/jni/include\opencv2/core/core_c.h \
+  C:/Users/juani/Documents/Stanford_2017_2018/OpenCV-android-sdk/sdk/native/jni/include\opencv2/video/video.hpp \
+  C:/Users/juani/Documents/Stanford_2017_2018/OpenCV-android-sdk/sdk/native/jni/include\opencv2/video/tracking.hpp \
+  C:/Users/juani/Documents/Stanford_2017_2018/OpenCV-android-sdk/sdk/native/jni/include\opencv2/video/background_segm.hpp \
+  C:/Users/juani/AppData/Local/Android/Sdk/ndk-bundle/build//../sources/cxx-stl/gnu-libstdc++/4.9/include\list
 
 C:/Users/juani/AppData/Local/Android/Sdk/ndk-bundle/build//../sources/cxx-stl/gnu-libstdc++/4.9/include\string:
 
@@ -66,3 +70,11 @@ C:/Users/juani/Documents/Stanford_2017_2018/OpenCV-android-sdk/sdk/native/jni/in
 C:/Users/juani/Documents/Stanford_2017_2018/OpenCV-android-sdk/sdk/native/jni/include\opencv2/imgproc/types_c.h:
 
 C:/Users/juani/Documents/Stanford_2017_2018/OpenCV-android-sdk/sdk/native/jni/include\opencv2/core/core_c.h:
+
+C:/Users/juani/Documents/Stanford_2017_2018/OpenCV-android-sdk/sdk/native/jni/include\opencv2/video/video.hpp:
+
+C:/Users/juani/Documents/Stanford_2017_2018/OpenCV-android-sdk/sdk/native/jni/include\opencv2/video/tracking.hpp:
+
+C:/Users/juani/Documents/Stanford_2017_2018/OpenCV-android-sdk/sdk/native/jni/include\opencv2/video/background_segm.hpp:
+
+C:/Users/juani/AppData/Local/Android/Sdk/ndk-bundle/build//../sources/cxx-stl/gnu-libstdc++/4.9/include\list:
